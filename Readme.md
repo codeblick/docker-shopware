@@ -27,5 +27,5 @@ db:
     - MYSQL_ROOT_PASSWORD=secret
     - MYSQL_DATABASE=shopware
   ports:
-    - 3306:3306```
-
+    - 3306:3306
+```

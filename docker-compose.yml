@@ -1,0 +1,18 @@
+shopware:
+  image: codeblick/shopware
+  volumes:
+    - ./MyPlugin:/var/www/html/custom/plugins/MyPlugin
+  environment:
+    - PLUGIN_NAME=MyPlugin
+  links:
+    - db
+  ports:
+    - 8080:80
+
+db:
+  image: mysql:5.7
+  environment:
+    - MYSQL_ROOT_PASSWORD=secret
+    - MYSQL_DATABASE=shopware
+  ports:
+    - 3306:3306

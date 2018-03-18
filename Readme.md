@@ -1,5 +1,5 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/codeblick/shopware.png)](https://hub.docker.com/r/codeblick/shopware/)
-[![Docker Stars](https://img.shields.io/docker/stars/codeblick/shopware.png)](https://hub.docker.com/r/codeblick/shopware/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/codeblick/shopware.svg)](https://hub.docker.com/r/codeblick/shopware/)
+[![Docker Stars](https://img.shields.io/docker/stars/codeblick/shopware.svg)](https://hub.docker.com/r/codeblick/shopware/)
 [![Build Status](https://travis-ci.org/codeblick/docker-shopware.svg?branch=5.4)](https://travis-ci.org/codeblick/docker-shopware)
 
 # codeblick/shopware

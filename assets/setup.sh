@@ -18,10 +18,12 @@ then
     mysql -u${SHOPWARE_DB_USER} -p${SHOPWARE_DB_PASSWORD} -h${SHOPWARE_DB_HOST} ${SHOPWARE_DB_NAME} < /shopware.sql
     rm /shopware.sql
 
-    if [[ ! -z "${PLUGIN_NAME}" ]]; then
-      php bin/console sw:plugin:install --activate ${PLUGIN_NAME}
-    fi
+    php /var/www/html/bin/console sw:media:migrate
 
+fi
+
+if [[ ! -z "${PLUGIN_NAME}" ]]; then
+    php /var/www/html/bin/console sw:plugin:install --activate ${PLUGIN_NAME}
 fi
 
 apache2-foreground

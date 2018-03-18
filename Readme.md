@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/codeblick/docker-php.svg?branch=7.1-apache)](https://travis-ci.org/codeblick/docker-php)
+
 # codeblick/shopware
 
 ## About

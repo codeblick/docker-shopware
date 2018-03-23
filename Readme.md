@@ -17,7 +17,7 @@ This image is used for shopware plugin development.
 shopware:
   image: codeblick/shopware
   volumes:
-    - ./MyPlugin:/var/www/html/custom/plugins/MyPlugin
+    - ./MyPlugin:/var/www/shopware/custom/plugins/MyPlugin
   environment:
     - PLUGIN_NAME=MyPlugin
   links:

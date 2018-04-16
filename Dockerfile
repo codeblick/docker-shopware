@@ -31,7 +31,9 @@ COPY ./assets/config.php /var/www/shopware/config.php
 COPY ./assets/shopware.sql /shopware.sql
 COPY ./assets/setup.sh /setup.sh
 
-RUN bash -c "chown -R www-data:www-data /var/www/shopware" && \
+COPY ./assets/ioncube_loader_lin_7.1.so /usr/local/ioncube/
+RUN echo "zend_extension=/usr/local/ioncube/ioncube_loader_lin_7.1.so" > /usr/local/etc/php/conf.d/00-ioncube.ini && \
+    bash -c "chown -R www-data:www-data /var/www/shopware" && \
     bash -c "chmod +x /setup.sh" && \
     rm -r recovery && \
     sed -i -- "s/\/var\/www\/html/\/var\/www\/shopware/ig" /etc/apache2/sites-enabled/000-default.conf

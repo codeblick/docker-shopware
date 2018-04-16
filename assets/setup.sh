@@ -8,7 +8,7 @@ then
     while [ $HAS_MYSQL != 0 ]
     do
         echo "Waiting for mysql server..."
-        sleep 1
+        sleep 5
         mysql -h${SHOPWARE_DB_HOST} -u${SHOPWARE_DB_USER} -p${SHOPWARE_DB_PASSWORD} -e "use ${SHOPWARE_DB_NAME}"
         HAS_MYSQL=$?
     done
